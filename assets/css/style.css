@@ -23,10 +23,10 @@
     bottom: -10%;
 }
 .boton_on{
-    background-color: green;
+    background-color: black;
 }
 .boton_off{
-    background-color: blue;
+    background-color: red;
 }
 button>a{
     color: white;
@@ -156,6 +156,15 @@ li{
 #grid_item_11{
     text-align: justify;
 }
+.hover-bold {
+    font-weight: normal;
+    transition: font-weight 0.3s;
+}
+
+  .hover-bold:hover {
+    font-weight: bold;
+}
+
 @media only screen and (max-width:600px)
 {
     #titulo{
