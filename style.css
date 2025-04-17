@@ -1,0 +1,103 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo del encabezado y navbar */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Hace que los elementos se alineen horizontalmente */
+    justify-content: center; /* Centra los elementos */
+    gap: 20px; /* Espaciado entre los elementos */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Secciones */
+section {
+    padding: 40px 20px;
+}
+
+/* Área de nuevo comentario */
+.nuevo-comentario {
+    margin-top: 20px;
+}
+
+.nuevo-comentario textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.nuevo-comentario button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.nuevo-comentario button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Estilo para el enlace activo */
+nav ul li a.active {
+    text-decoration: underline;
+    font-weight: bold;
+}

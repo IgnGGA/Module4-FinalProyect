@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mi Portafolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#acerca">Acerca de mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#recomendaciones">Recomendaciones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="acerca">
+        <h2>Acerca de mí</h2>
+        <p>Breve descripción sobre quién soy y qué hago.</p>
+    </section>
+
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>React, Node.js</li>
+        </ul>
+    </section>
+
+    <section id="proyectos">
+        <h2>Proyectos</h2>
+        <div class="proyecto">
+            <h3>Proyecto 1</h3>
+            <p>Descripción breve del proyecto.</p>
+        </div>
+        <div class="proyecto">
+            <h3>Proyecto 2</h3>
+            <p>Descripción breve del proyecto.</p>
+        </div>
+    </section>
+
+    <section id="recomendaciones">
+        <h2>Recomendaciones</h2>
+        <blockquote>
+            "Excelente trabajo y dedicación."
+        </blockquote>
+        <blockquote>
+            "Muy profesional y comprometido."
+        </blockquote>
+
+        <div class="nuevo-comentario">
+            <h3>Agregar un comentario</h3>
+            <textarea id="comentario" placeholder="Escribe tu recomendación aquí..."></textarea>
+            <button onclick="agregarComentario()">Comentar</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Mi Portafolio</p>
+    </footer>
+
+    <script>
+        function agregarComentario() {
+            const comentarioTexto = document.getElementById('comentario').value;
+            if (comentarioTexto.trim() !== "") {
+                const nuevoBloque = document.createElement('blockquote');
+                nuevoBloque.textContent = comentarioTexto;
+                document.getElementById('recomendaciones').appendChild(nuevoBloque);
+                document.getElementById('comentario').value = "";
+            }
+        }
+    </script>
+
+</body>
+
+<script>
+    function agregarComentario() {
+        const comentarioTexto = document.getElementById('comentario').value;
+        if (comentarioTexto.trim() !== "") {
+            const nuevoBloque = document.createElement('blockquote');
+            nuevoBloque.textContent = comentarioTexto;
+            document.getElementById('recomendaciones').appendChild(nuevoBloque);
+            document.getElementById('comentario').value = "";
+        }
+    }
+
+    // Código para resaltar el enlace activo
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    window.addEventListener('scroll', () => {
+        let current = "";
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            if (pageYOffset >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+</html>
