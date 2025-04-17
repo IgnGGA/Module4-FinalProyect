@@ -42,32 +42,6 @@ section {
     padding: 40px 20px;
 }
 
-/* Área de nuevo comentario */
-.nuevo-comentario {
-    margin-top: 20px;
-}
-
-.nuevo-comentario textarea {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    font-size: 1em;
-}
-
-.nuevo-comentario button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.nuevo-comentario button:hover {
-    background-color: #555;
-}
-
 /* Footer */
 footer {
     background-color: #333;
@@ -138,4 +112,49 @@ nav ul li a.active {
     margin-bottom: 10px; /* Espacio entre recomendaciones */
     padding-left: 20px; /* Espacio a la izquierda */
     border-left: 3px solid #007bff; /* Línea a la izquierda para resaltar */
+}
+#recomendaciones {
+    padding-bottom: 100px; /* Deja espacio para el cuadro de comentarios */
+}
+
+#comentarios-lista {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column-reverse; /* Muestra los comentarios nuevos arriba */
+}
+
+.nuevo-comentario {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 5px 8px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }

@@ -94,6 +94,9 @@
         <blockquote>
             "Expand your EVR test bench project by creating an IoT platform that connects your Arduino to a real-time web dashboard. Use modern tools like Vue.js for the frontend and Firebase or Node.js for the backend, showcasing your ability to integrate hardware with dynamic web technologies."
         </blockquote>
+        <blockquote>
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet earum temporibus, voluptatibus, dolor, veniam hic eos culpa totam iste consequuntur maxime provident. Fuga consequuntur culpa quis sed dicta sunt labore!"
+        </blockquote>
 
         <div class="nuevo-comentario">
             <h3>Agregar un comentario</h3>
@@ -130,7 +133,12 @@
         if (confirmacion) {
             const nuevoBloque = document.createElement('blockquote');
             nuevoBloque.textContent = comentarioTexto;
-            document.getElementById('recomendaciones').appendChild(nuevoBloque);
+            
+            // Se agrega al principio de la lista de comentarios
+            const comentariosLista = document.getElementById('comentarios-lista');
+            comentariosLista.insertBefore(nuevoBloque, comentariosLista.firstChild);
+
+            // Limpiamos el campo de texto
             document.getElementById('comentario').value = "";
             alert("¡Recomendación agregada exitosamente!");
         }
