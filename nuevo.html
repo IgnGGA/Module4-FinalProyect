@@ -85,10 +85,10 @@
     <section id="recomendaciones">
         <h2>Recomendaciones</h2>
         <blockquote>
-            "Excelente trabajo y dedicación."
+            "Consider contributing to communities that develop automation tools or web interfaces for electronic devices. Being part of an open source project that combines Arduino with Vue.js would allow you to apply your skills and learn from other developers in a collaborative environment."
         </blockquote>
         <blockquote>
-            "Muy profesional y comprometido."
+            "Create a personal website portfolio showcasing your projects (such as the EVR test bench) with images, diagrams, and code. You can use Bootstrap for responsive design and JavaScript or Vue.js to add animations or interactive simulations of your work."
         </blockquote>
 
         <div class="nuevo-comentario">
@@ -99,7 +99,7 @@
     </section>
 
     <footer>
-        <p>© 2025 Mi Portafolio</p>
+        <p>© 2025 Ignacio Gamboa</p>
     </footer>
 
     <script>
@@ -118,14 +118,18 @@
 
 <script>
     function agregarComentario() {
-        const comentarioTexto = document.getElementById('comentario').value;
-        if (comentarioTexto.trim() !== "") {
-            const nuevoBloque = document.createElement('blockquote');
-            nuevoBloque.textContent = comentarioTexto;
-            document.getElementById('recomendaciones').appendChild(nuevoBloque);
-            document.getElementById('comentario').value = "";
+            const comentarioTexto = document.getElementById('comentario').value;
+            if (comentarioTexto.trim() !== "") {
+                const confirmacion = confirm("¿Deseas agregar esta recomendación?");
+                if (confirmacion) {
+                    const nuevoBloque = document.createElement('blockquote');
+                    nuevoBloque.textContent = comentarioTexto;
+                    document.getElementById('recomendaciones').appendChild(nuevoBloque);
+                    document.getElementById('comentario').value = "";
+                    alert("¡Recomendación agregada exitosamente!");
+                }
+            }
         }
-    }
 
     // Código para resaltar el enlace activo
     const sections = document.querySelectorAll('section');
