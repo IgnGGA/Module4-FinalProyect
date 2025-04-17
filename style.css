@@ -133,3 +133,9 @@ nav ul li a.active {
     float: left;
     margin:30px 50px 0px 10px;
 }
+#recomendaciones blockquote {
+    font-style: italic;
+    margin-bottom: 10px; /* Espacio entre recomendaciones */
+    padding-left: 20px; /* Espacio a la izquierda */
+    border-left: 3px solid #007bff; /* Línea a la izquierda para resaltar */
+}
