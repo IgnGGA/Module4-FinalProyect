@@ -71,25 +71,6 @@ ol,ul,li{
 li{
     padding:10px;
 }
-#lista_reglas{
-    width: fit-content;
-    text-align: justify;
-}
-#titulo_reglas{
-    text-align: center;
-}
-.reglas1{
-    padding-left: 20%;
-    display: block;
-    margin: 15px 0px 10px 0px;
-}
-#sublista1{
-    margin-left: -10%;
-    list-style: lower-alpha;
-}
-#sublista2{
-    margin-left:-10%
-}
 .cuadrado{
     list-style: square;
 }
@@ -100,21 +81,6 @@ li{
     border-collapse: collapse;
     padding: 0px 27px 0px 3px;
     vertical-align: top;
-}
-#calendario{
-    width: 600px;
-    margin-left: 25%;
-}
-#tab_01{
-    margin-left: auto;
-    margin-right: auto;
-    width: 550px;
-}
-#calendario p{
-    padding-left: 0px;
-}
-#calendario h1,h2{
-    text-align: center;
 }
 #tab_01 th{
     font-style: italic;
@@ -156,7 +122,7 @@ li{
     transition: font-weight 0.3s;
 }
 
-  .hover-bold:hover {
+.hover-bold:hover {
     font-weight: bold;
 }
 
