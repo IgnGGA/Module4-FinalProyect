@@ -120,3 +120,16 @@ nav ul li a.active {
 .volver-inicio:hover {
     background-color: #0056b3;
 }
+.acerca-contenido {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.imagen-acerca {
+    width: 150px; /* Puedes ajustar el tamaño */
+    height: auto;
+    border-radius: 10px; /* Opcional, para bordes redondeados */
+    float: left;
+    margin:30px 50px 0px 10px;
+}
